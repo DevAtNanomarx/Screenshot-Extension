@@ -1,0 +1,19 @@
+{
+	"manifest_version": 3,
+	"name": "Screenshot Capturer",
+	"version": "1.0",
+	"description": "Capture a screenshot of a selected region and save it as a file.",
+	"permissions": ["activeTab", "scripting", "storage"],
+	"background": {
+		"service_worker": "background.js"
+	},
+	"action": {
+		"default_popup": "sidebar.html"
+	},
+	"web_accessible_resources": [
+		{
+			"resources": ["content.js"],
+			"matches": ["<all_urls>"]
+		}
+	]
+}
